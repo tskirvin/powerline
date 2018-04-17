@@ -1,0 +1,86 @@
+{
+	"name": "Skirv (from brisk)",
+	"groups": {
+		"information:unimportant":  { "fg": "gray8", "bg": "solarized:blue", "attrs": [] },
+		"information:additional":   { "fg": "gray9", "bg": "solarized:blue", "attrs": [] },
+		"background":               { "fg": "white", "bg": "solarized:blue", "attrs": [] },
+		"background:divider":       { "fg": "gray6", "bg": "solarized:blue", "attrs": [] },
+		"mode":                     { "fg": "green", "bg": "black", "attrs": ["bold"] },
+		"visual_range":             { "fg": "red", "bg": "white", "attrs": ["bold"] },
+		"modified_indicator":       { "fg": "brightyellow", "bg": "solarized:blue", "attrs": ["bold"] },
+		"paste_indicator":          { "fg": "white", "bg": "mediumorange", "attrs": ["bold"] },
+		"readonly_indicator":       { "fg": "brightestred", "bg": "solarized:blue", "attrs": [] },
+		"branch_dirty":             { "fg": "brightyellow", "bg": "solarized:blue", "attrs": [] },
+		"branch:divider":           { "fg": "gray7", "bg": "solarized:blue", "attrs": [] },
+		"file_name":                { "fg": "yellow", "bg": "solarized:blue", "attrs": ["bold"] },
+		"window_title":             { "fg": "white", "bg": "solarized:blue", "attrs": [] },
+		"file_name_no_file":        { "fg": "brightestyellow", "bg": "solarized:blue", "attrs": ["bold"] },
+		"file_vcs_status":          { "fg": "brightestred", "bg": "solarized:blue", "attrs": [] },
+		"file_vcs_status_M":        { "fg": "brightyellow", "bg": "solarized:blue", "attrs": [] },
+		"file_vcs_status_A":        { "fg": "brightgreen", "bg": "solarized:blue", "attrs": [] },
+		"line_percent":             { "fg": "gray9", "bg": "solarized:blue", "attrs": [] },
+		"line_percent_gradient":    { "fg": "dark_green_gray", "bg": "solarized:blue", "attrs": [] },
+		"position":                 { "fg": "gray9", "bg": "solarized:blue", "attrs": [] },
+		"position_gradient":        { "fg": "green_yellow_red", "bg": "darkestblue", "attrs": [] },
+		"line_current":             { "fg": "white", "bg": "black", "attrs": ["bold"] },
+		"line_current_symbol":      { "fg": "white", "bg": "black", "attrs": [] },
+		"virtcol_current_gradient": { "fg": "dark_GREEN_Orange_red", "bg": "black", "attrs": [] },
+		"col_current":              { "fg": "red", "bg": "black", "attrs": [] },
+		"modified_buffers":         { "fg": "brightyellow", "bg": "black", "attrs": [] },
+		"attached_clients":         { "fg": "gray8", "bg": "black", "attrs": [] },
+		"error":                    { "fg": "brightestred", "bg": "darkred", "attrs": ["bold"] },
+		"warning":                  { "fg": "brightyellow", "bg": "darkorange", "attrs": ["bold"] },
+		"current_tag":              { "fg": "gray9", "bg": "black", "attrs": [] },
+
+		"tab_nc:modified_indicator": { "fg": "brightyellow", "bg": "gray2", "attrs": ["bold"] }
+	},
+	"mode_translations": {
+		"nc": {
+		},
+		"i": {
+			"groups": {
+				"mode": { "fg": "green", "bg": "black", "attrs": ["bold"] }
+			}
+		},
+		"ic": {
+			"groups": {
+				"mode": { "fg": "green", "bg": "black", "attrs": ["bold"] }
+			}
+		},
+		"ix": {
+			"groups": {
+				"mode": { "fg": "green", "bg": "black", "attrs": ["bold"] }
+			}
+		},
+		"v": {
+			"groups": {
+				"mode": { "fg": "red", "bg": "white", "attrs": ["bold"] }
+			}
+		},
+		"V": {
+			"groups": {
+				"mode": { "fg": "red", "bg": "white", "attrs": ["bold"] }
+			}
+		},
+		"^V": {
+			"groups": {
+				"mode": { "fg": "red", "bg": "white", "attrs": ["bold"] }
+			}
+		},
+		"R": {
+			"groups": {
+				"mode": { "fg": "white", "bg": "brightred", "attrs": ["bold"] }
+			}
+		},
+		"Rc": {
+			"groups": {
+				"mode": { "fg": "white", "bg": "brightred", "attrs": ["bold"] }
+			}
+		},
+		"Rx": {
+			"groups": {
+				"mode": { "fg": "white", "bg": "brightred", "attrs": ["bold"] }
+			}
+		}
+	}
+}
