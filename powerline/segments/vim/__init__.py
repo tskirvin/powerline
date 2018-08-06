@@ -245,7 +245,7 @@ def file_scheme(pl, segment_info):
 
 
 @requires_segment_info
-def file_directory(pl, segment_info, remove_scheme=True, shorten_user=True, shorten_cwd=True, shorten_home=False):
+def file_directory(pl, segment_info, remove_scheme=True, shorten_user=True, shorten_cwd=False, shorten_home=False):
 	'''Return file directory (head component of the file path).
 
 	:param bool remove_scheme:
