@@ -101,10 +101,6 @@
 				"align": "r"
 			},
 			{
-				"function": "csv_col_current",
-				"priority": 30
-			},
-			{
 				"type": "string",
 				"name": "line_current_symbol",
 				"highlight_groups": ["line_current_symbol", "line_current"]
