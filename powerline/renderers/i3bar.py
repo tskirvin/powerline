@@ -17,11 +17,11 @@ class I3barRenderer(Renderer):
 		# We don’t need to explicitly reset attributes, so skip those calls
 		return ''
 
-	def hl(self, contents, fg=None, bg=None, attrs=None):
+	def hl(self, contents, fg=None, bg=None, attrs=None, **kwargs):
 		segment = {
 			'full_text': contents,
 			'separator': False,
-			'separator_block_width': 0,  # no seperators
+			'separator_block_width': 0,  # no separators
 		}
 
 		if fg is not None:

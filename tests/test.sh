@@ -18,7 +18,7 @@ if test "$TRAVIS" = true ; then
 		workon cpython-ucs2-$UCS2_PYTHON_VARIANT
 		set -e
 	else
-		LIBRARY_PATH="$(ldd "$(which python)" | grep libpython | sed 's/^.* => //;s/ .*$//')"
+		LIBRARY_PATH="$(ldd "$(command -v python)" | grep libpython | sed 's/^.* => //;s/ .*$//')"
 		LIBRARY_DIR="$(dirname "${LIBRARY_PATH}")"
 		export LD_LIBRARY_PATH="$LIBRARY_DIR${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH"
 	fi
@@ -33,10 +33,10 @@ for script in "$ROOT"/tests/test_*/test.sh ; do
 	fi
 done
 
-if test -e tests/failures ; then
-	echo "Some tests failed. Summary:"
-	cat tests/failures
-	rm tests/failures
+if test -e "$FAILURES_FILE" ; then
+	echo "Fails and skips summary:"
+	cat "$FAILURES_FILE"
+	rm "$FAILURES_FILE"
 fi
 
 exit_suite

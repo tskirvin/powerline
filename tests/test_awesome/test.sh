@@ -13,20 +13,20 @@ cp -r "$TEST_STATIC_ROOT/powerline" "$TEST_ROOT"
 
 export PYTHONPATH="$ROOT${PYTHONPATH:+:}$PYTHONPATH"
 
-ln -s "$(which "${PYTHON}")" "$TEST_PATH"/python
-ln -s "$(which cat)" "$TEST_PATH"
-ln -s "$(which sh)" "$TEST_PATH"
-ln -s "$(which env)" "$TEST_PATH"
-if which socat ; then
-	ln -s "$(which socat)" "$TEST_PATH"
+ln -s "$(command -v "${PYTHON}")" "$TEST_PATH"/python
+ln -s "$(command -v cat)" "$TEST_PATH"
+ln -s "$(command -v sh)" "$TEST_PATH"
+ln -s "$(command -v env)" "$TEST_PATH"
+if command -v socat ; then
+	ln -s "$(command -v socat)" "$TEST_PATH"
 fi
 for pexe in powerline powerline.sh powerline.py ; do
 	if test -e scripts/$pexe ; then
 		ln -s "$PWD/scripts/$pexe" $TEST_ROOT/path
 	elif test -e client/$pexe ; then
 		ln -s "$PWD/client/$pexe" $TEST_ROOT/path
-	elif which $pexe ; then
-		ln -s "$(which $pexe)" $TEST_ROOT/path
+	elif command -v $pexe ; then
+		ln -s "$(command -v $pexe)" $TEST_ROOT/path
 	else
 		continue
 	fi
@@ -102,7 +102,7 @@ if ! test -e "$DEPRECATED_SCRIPT" ; then
 	# skip "deprecated" "Missing deprecated bar bindings script"
 	:
 else
-	enter_suite "deprecated"
+	enter_suite "deprecated" final
 	for args in "" "0.5"; do
 		rm -rf "$TEST_ROOT/results"
 		mkdir "$TEST_ROOT/results"
@@ -132,7 +132,7 @@ else
 	exit_suite --continue
 fi
 
-enter_suite "awesome"
+enter_suite "awesome" final
 ADDRESS="powerline-ipc-test-$$"
 echo "Powerline address: $ADDRESS"
 rm -rf "$TEST_ROOT/results"

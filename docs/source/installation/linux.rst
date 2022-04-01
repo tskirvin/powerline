@@ -29,7 +29,7 @@ should be followed:
 
    .. code-block:: sh
 
-      pip install --user git+git://github.com/powerline/powerline
+      pip install --user git+https://github.com/powerline/powerline
 
    will get the latest development version.
 
@@ -62,7 +62,7 @@ with any coding font.
 
       mv PowerlineSymbols.otf ~/.local/share/fonts/
 
-#. Update font cache for the path the font was moved to (root priveleges may be 
+#. Update font cache for the path the font was moved to (root privileges may be 
    needed to update cache for the system-wide paths)::
 
       fc-cache -vf ~/.local/share/fonts/
