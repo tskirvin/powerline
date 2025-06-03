@@ -1,11 +1,6 @@
 Powerline
 =========
 
-.. image:: https://api.travis-ci.org/powerline/powerline.svg?branch=develop
-   :target: `travis-build-status`_
-   :alt: Build status
-.. _travis-build-status: https://travis-ci.org/powerline/powerline
-
 **Powerline is a statusline plugin for vim, and provides statuslines and 
 prompts for several other applications, including zsh, bash, fish, tmux,
 IPython, Awesome, i3 and Qtile.**
